@@ -1,5 +1,4 @@
 from airflow import DAG
-# Operators; we need this to operate!
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.utils.dates import days_ago
@@ -33,10 +32,9 @@ dag = DAG('tempus', default_args=default_args,
 task = PythonOperator(
     task_id='top_highlights',
     provide_context=True,
-    # provide params and additional kwargs to python_callable
     python_callable=news.flatten,
     op_kwargs={'s3bucket': bucket, 'sourceName':sourceName}
-    dag=dag,
+    dag=dag
 )
 
 end = DummyOperator(
