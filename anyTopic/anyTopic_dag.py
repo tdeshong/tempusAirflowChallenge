@@ -24,7 +24,7 @@ default_args = {
     'retry_delay': timedelta(minutes=5),
 )
 
-dag = DAG('tempus', default_args=default_args,
+dag = DAG(dag_id, default_args=default_args,
            description = 'Newsapi Any Topic',
            schedule_interval = timedelta(days=1),
 )
