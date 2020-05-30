@@ -1,6 +1,6 @@
 import os
 from airflow.models import DagBag
-dags_dirs = ['../anyTopic']
+dags_dirs = ['../anyTopicDagBag']
 
 for dir in dags_dirs:
    dag_bag = DagBag(os.path.expanduser(dir))
