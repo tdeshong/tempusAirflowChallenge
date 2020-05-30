@@ -18,6 +18,8 @@ def printContext(**kwargs):
     logging.info("top highlights - {}".format(kwargs))
 
 
+dag_id ="top_highlights"
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
