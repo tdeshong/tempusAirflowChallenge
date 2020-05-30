@@ -54,5 +54,5 @@ class News():
         bucket = "{}/{}".format(s3bucket,sourcename)
         s3.meta.client.upload_file(filename, bucket, filename)
         
-        return info
+
         
