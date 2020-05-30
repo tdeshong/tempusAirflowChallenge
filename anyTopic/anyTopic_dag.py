@@ -34,12 +34,12 @@ task = PythonOperator(
     provide_context=True,
     python_callable=news.flatten,
     op_kwargs={'s3bucket': bucket, 'sourceName':sourceName, 'topic':'cancer'}
-    dag=dag,
+    dag=dag
 )
 
 end = DummyOperator(
     task_id='end',
-    dag=dag,
+    dag=dag
 )
     
 end << task
