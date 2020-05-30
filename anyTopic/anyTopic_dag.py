@@ -15,7 +15,8 @@ LOGGER = logging.getLogger("airflow.task")
 
 #function for the logs
 def printContext(**kwargs):
-    logging.info("Any topic - {}".format(kwargs))
+    logging.info('Any topic - {}'.format(kwargs))
+    return 'Success'
 
 
 dag_id ="Any_topic"
