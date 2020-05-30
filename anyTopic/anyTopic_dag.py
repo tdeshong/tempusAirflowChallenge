@@ -32,7 +32,6 @@ dag = DAG('tempus', default_args=default_args,
 task = PythonOperator(
     task_id='top_highlights',
     provide_context=True,
-    # provide params and additional kwargs to python_callable
     python_callable=news.flatten,
     op_kwargs={'s3bucket': bucket, 'sourceName':sourceName, 'topic':'cancer'}
     dag=dag,
@@ -40,7 +39,7 @@ task = PythonOperator(
 
 end = DummyOperator(
     task_id='end',
-    dag=dag
+    dag=dag,
 )
     
 end << task
