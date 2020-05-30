@@ -11,11 +11,12 @@ from challenge as c
 NEWS_KEY = os.environ.get('NEWS_KEY')     #api key for newsapi.org
 news = c.News(NEWS_KEY)                   #constructor from challenge
 bucket, sourceName = os.environ.get('s3bucket'), os.environ.get('soureName')
-LOGGER = logging.getLogger("airflow.task")
+LOGGER = logging.getLogger('airflow.task')
 
 #function for the logs
 def printContext(**kwargs):
-    logging.info("top highlights - {}".format(kwargs))
+    logging.info('top highlights - {}'.format(kwargs))
+    return 'Success'
 
 
 dag_id ="top_highlights"
