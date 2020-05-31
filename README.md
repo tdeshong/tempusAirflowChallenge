@@ -7,7 +7,7 @@ The data pipeline fetches data from [News API](https://newsapi.org),
 ## Quickstart
 python 3.7   docker ------\
 Run `make init` to download project dependencies\
-Run `make run` with docker running to bring up airflow\
+Run `make run` with docker running to bring up airflow
  * There should be 2 DAGs named `top_highlights` and `any_topic`
 
 
