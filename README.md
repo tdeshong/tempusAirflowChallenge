@@ -2,7 +2,7 @@
 The data pipeline fetches data from [News API](https://newsapi.org),
  transform the data into a tabular structure,
  and store the transformed data on [Amazon S3](https://aws.amazon.com/s3/).
- This data pipeline uses Airflow [Apache Airflow](https://airflow.apache.org) to fetch the data daily.
+ This data pipeline uses [Apache Airflow](https://airflow.apache.org) to fetch the data daily.
 
 ## Quickstart
 python 3.7   docker ------\
@@ -53,16 +53,7 @@ Run `make run` with docker running to bring up airflow\
 - [ ] Bonus: Write an integration test for any of the external services your solution connects to.
 
 
-## Rules of engagement
-* We suggest that you establish a four hour timebox to complete the challenge.
-* The solution must perform a Python transformation of the data;
- feel free to add any open-source libraries you wish and add additional output files.
-* Please document changes required to make the solution resilient to
- failure by taking the following actions:
-  * add developer-friendly requirements to functions
-  * add comments in the main function that list failures that the solution should
-  be designed to handle
-* Please run `make clean` and deliver your Python code via repo or zip ahead of the meeting.
+
 
 ## Grading
 We will grade your solution with the following guidelines.
