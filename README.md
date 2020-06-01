@@ -7,6 +7,7 @@ The data pipeline fetches data (top highlights in English and/or results from sp
 ## Quickstart
 python 3.7 docker 2.3.0.2\
 Run `make init` to download project dependencies\
+Run `make test` to make sure basic smoke tests are passing\
 Run `make run` with docker running to bring up airflow
  * There should be 2 DAGs named `top_highlights` and `any_topic`
 
