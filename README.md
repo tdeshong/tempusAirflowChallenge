@@ -1,11 +1,11 @@
 # Tempus Data Engineer Challenge
-The data pipeline fetches data from [News API](https://newsapi.org),
+The data pipeline fetches data (top highlights in English and/or results from specified top) from [News API](https://newsapi.org),
  transform the data into a tabular structure,
  and store the transformed data on [Amazon S3](https://aws.amazon.com/s3/).
  This data pipeline uses [Apache Airflow](https://airflow.apache.org) to fetch the data daily.
 
 ## Quickstart
-python 3.7   docker ------\
+python 3.7\
 Run `make init` to download project dependencies\
 Run `make run` with docker running to bring up airflow
  * There should be 2 DAGs named `top_highlights` and `any_topic`
@@ -36,34 +36,6 @@ Run `make run` with docker running to bring up airflow
     ├── requirements.txt
     ├── setup.cfg
     └── setup.py
-
-
-## Requirements
-- [ ] Use Airflow to construct a new data pipeline (DAG) named 'tempus_challenge_dag'.
-- [ ] Data pipeline must be scheduled to run once a day.
-- [ ] Data pipeline will:
-  - [ ] Retrieve all English news sources.
-  - [ ] For each news source, retrieve the top headlines.
-    - [ ] Top headlines must be flattened into a CSV file. CSV Filename: `<pipeline_execution_date>_top_headlines.csv`
-    - [ ] Result CSV must be uploaded to the following s3 location `<s3_bucket>/<source_name>`
-- [ ] The solution must contain at least one test for your headline transformation.
-- [ ] The solution must be start-able via `make run`.
-- [ ] The solution must be pep-8 compliant.
-- [ ] Bonus: Build a separate pipeline that uses the following keywords instead of English news sources: Tempus Labs, Eric Lefkofsky, Cancer, Immunotherapy
-- [ ] Bonus: Write an integration test for any of the external services your solution connects to.
-
-
-
-
-## Grading
-We will grade your solution with the following guidelines.
- This list is ordered with highest-weighted factors at the top:
-1. **Functional correctness**: The solution meets all functional requirements,
- including bonuses.
-2. **Code composition and style**: Code follows appropriate coding standards and pep-8 guidelines.
-3. **Communication**: The project includes a README and the code is well-commented.
-
-
 
 
 ## [News API](https://newsapi.org)
