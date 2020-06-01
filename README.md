@@ -5,7 +5,7 @@ The data pipeline fetches data (top highlights in English and/or results from sp
  This data pipeline uses [Apache Airflow](https://airflow.apache.org) to fetch the data daily.
 
 ## Quickstart
-python 3.7\
+python 3.7 docker 2.3.0.2\
 Run `make init` to download project dependencies\
 Run `make run` with docker running to bring up airflow
  * There should be 2 DAGs named `top_highlights` and `any_topic`
